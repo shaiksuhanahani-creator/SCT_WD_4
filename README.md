@@ -30,6 +30,6 @@ Develop a basic to-do app that enables users to add and maintain tasks with full
 - **Task Counter**: Shows pending vs completed tasks
 
 ## 🚀 Live Demo
-[View Live Project](https://your-username.github.io/SCT_WD_4/)
+  https://shaiksuhanahani-creator.github.io/SCT_WD_4/
 
 ## 📁 Folder Structure
