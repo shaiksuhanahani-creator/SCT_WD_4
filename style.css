@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    background: #ffffff;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    padding: 30px;
+    margin-top: 40px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #1f2937;
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.input-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+#task-input {
+    flex: 1 1 200px;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1f2937;
+    outline: none;
+}
+
+#task-input:focus {
+    border-color: #667eea;
+}
+
+#date-input {
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #1f2937;
+    outline: none;
+}
+
+#date-input:focus {
+    border-color: #667eea;
+}
+
+#add-btn {
+    padding: 12px 20px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add-btn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #4b5563;
+    font-size: 0.95rem;
+}
+
+#task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.task-item {
+    background: #f9fafb;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.2s;
+}
+
+.task-item:hover {
+    border-color: #667eea;
+}
+
+.task-item.completed {
+    background: #f0fdf4;
+    border-color: #86efac;
+}
+
+.task-item.completed .task-text {
+    text-decoration: line-through;
+    color: #6b7280;
+}
+
+.task-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #16a34a;
+}
+
+.task-content {
+    flex: 1;
+}
+
+.task-text {
+    color: #1f2937;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+.task-date {
+    color: #6b7280;
+    font-size: 0.85rem;
+}
+
+.task-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-btn, .delete-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.edit-btn {
+    background: #3b82f6;
+    color: white;
+}
+
+.edit-btn:hover {
+    background: #2563eb;
+}
+
+.delete-btn {
+    background: #ef4444;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: #dc2626;
+}
+
+#clear-all-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #ef4444;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#clear-all-btn:hover {
+    background: #dc2626;
+}
+
+.hide {
+    display: none;
+}
+
+.empty-state {
+    text-align: center;
+    color: #9ca3af;
+    padding: 40px 20px;
+    font-size: 1.1rem;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        margin-top: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.6rem;
+    }
+    
+    .input-section {
+        flex-direction: column;
+    }
+    
+    #add-btn {
+        width: 100%;
+    }
+    
+    .stats {
+        font-size: 0.85rem;
+    }
+    
+    .task-item {
+        flex-wrap: wrap;
+    }
+    
+    .task-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+}

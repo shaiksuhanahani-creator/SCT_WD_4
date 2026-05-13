@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Web App | SCT_WD_4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📝 My To-Do List</h1>
+            <p>Organize your tasks efficiently</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="task-input" placeholder="Add a new task...">
+            <input type="datetime-local" id="date-input">
+            <button id="add-btn">Add Task</button>
+        </div>
+
+        <div class="stats">
+            <span>Total: <span id="total-tasks">0</span></span>
+            <span>Completed: <span id="completed-tasks">0</span></span>
+            <span>Pending: <span id="pending-tasks">0</span></span>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <button id="clear-all-btn" class="hide">Clear All Tasks</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
